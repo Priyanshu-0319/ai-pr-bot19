@@ -67,6 +67,12 @@ app.get("/health", (req, res) => {
   console.log("/health endpoint hit");
   res.send({ status: "running" });
 });
+// Home route
+app.get("/", async () => {
+  return {
+    message: "PR Bot Backend is running 🚀",
+  };
+});
 
 // Webhook endpoint
 app.post("/webhook", async (req, reply) => {
